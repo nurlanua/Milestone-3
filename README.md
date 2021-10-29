@@ -1,2 +1,2 @@
 # Milestone-3
-# Edit in this file
+This is a sample text 1.
