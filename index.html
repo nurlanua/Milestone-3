@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Page Title</title>
+    <link rel= "stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class = "hero">
+        <div class ="btn-box">
+            <button data-tab-target=#main>Main</button>
+            <button data-tab-target=#workout>Workout</button>
+            <button data-tab-target=#stats>Statistics</button>
+            <button data-tab-target=#tips>Health Tips</button>
+            <button data-tab-target=#account>Account</button>
+	</div>
+    </div>
+    <p> Why is this not working? </p>
+    <div class = "tab-content">
+        <div id="main" data-tab-content class="active">
+            <h1>Main</h1>
+	    <p>This is main page</p>
+        </div>
+        <div id="workout" data-tab-content>
+            <h1>Workout</h1>
+	    <p>This is workout page</p>
+        </div>
+        <div id="stats" data-tab-content>
+            <h1>Statistics</h1>
+	    <p>This is statistics page</p>
+        </div>
+        <div id="tips" data-tab-content>
+            <h1>Health tips</h1>
+	    <p>This is Health tips page</p>
+        </div>
+        <div id="account" data-tab-content>
+            <h1>Account</h1>
+	    <p>This is account page</p>
+        </div>    
+	
+    </div>
+
+</body>
+</html>
