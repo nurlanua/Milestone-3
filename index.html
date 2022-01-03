@@ -4,27 +4,122 @@
     <title>Page Title</title>
     <link rel= "stylesheet" href="styles.css">
     <script src="script.js" defer></script>
-    
 </head>
 <body>
     <div class = "hero">
         <div class ="btn-box">
-            <button data-tab-target=#main>Main</button>
-            <button data-tab-target=#workout>Workout</button>
-            <button data-tab-target=#stats>Statistics</button>
-            <button data-tab-target=#tips>Health Tips</button>
-            <button data-tab-target=#account>Account</button>
+            <button data-tab-target="#main" class="active tab">Main</button>
+            <button data-tab-target="#workout" class="tab">Workout</button>
+            <button data-tab-target="#stats" class="tab">Statistics</button>
+            <button data-tab-target="#tips" class="tab">Health Tips</button>
+            <button data-tab-target="#account" class="tab">Account</button>
 	</div>
     </div>
+    
     <div class = "tab-content">
         <div id="main" data-tab-content class="active">
             <h1>Main</h1>
 	    <p>This is main page</p>
         </div>
         <div id="workout" data-tab-content>
-            <h1>Workout</h1>
-	    <p>This is workout page</p>
-        </div>
+            <div class="cart">
+                <h2 class="section-header">CART</h2>
+                    <div class="cart-row">
+                        <span class="cart-item cart-header cart-column">EXERCISE</span>
+                        <span class="cart-price cart-header cart-column">CAL-BURN</span>
+                        <span class="cart-quantity cart-header cart-column">MINUTES</span>
+                    </div>
+                    <div class="cart-items">
+                    </div>
+                    <div class="cart-total">
+                        <strong class="cart-total-title">Total</strong>
+                        <span class="cart-total-price">0</span>
+                    </div>
+                <button class="btn btn-primary btn-purchase" type="button">COMPLETE</button>
+            </div>
+	    <div class = "shop-items">		
+                <div class="shop-item">
+                    <span class="shop-item-title">Running</span>
+                    <img class="shop-item-image" src="Images/Album 1.png">
+                    <div class="shop-item-details">
+                        <span class="shop-item-price">10 Cal/min</span>
+                        <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                    </div>
+                </div>
+                <div class="shop-item">
+                    <span class="shop-item-title">Swimming</span>
+                    <img class="shop-item-image" src="Images/Album 2.png">
+                    <div class="shop-item-details">
+                        <span class="shop-item-price">15 Cal/min</span>
+                        <button class="btn btn-primary shop-item-button"type="button">ADD TO CART</button>
+                    </div>
+                </div>
+                <div class="shop-item">
+                    <span class="shop-item-title">Lifting</span>
+                    <img class="shop-item-image" src="Images/Album 3.png">
+                    <div class="shop-item-details">
+                        <span class="shop-item-price">10 Cal/min</span>
+                        <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                    </div>
+                </div>
+                <div class="shop-item">
+                    <span class="shop-item-title">Chin-Ups</span>
+                    <img class="shop-item-image" src="Images/Album 4.png">
+                    <div class="shop-item-details">
+                        <span class="shop-item-price">5 Cal/min</span>
+                        <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                    </div>
+                </div>
+                <div class="shop-item">
+                    <span class="shop-item-title">Squats</span>
+                    <img class="shop-item-image" src="Images/Squats.png">
+                    <div class="shop-item-details">
+                        <span class="shop-item-price">6 Cal/min</span>
+                        <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                    </div>
+                </div>
+                <div class="shop-item">
+                    <span class="shop-item-title">Sit-Ups</span>
+                    <img class="shop-item-image" src="Images/Sit-Ups.png">
+                    <div class="shop-item-details">
+                        <span class="shop-item-price">7 Cal/min</span>
+                        <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                    </div>
+                </div>
+                <div class="shop-item">
+                    <span class="shop-item-title">Cycling</span>
+                    <img class="shop-item-image" src="Images/Cycling.png">
+                    <div class="shop-item-details">
+                        <span class="shop-item-price">17 Cal/min</span>
+                        <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                    </div>
+                </div>
+                <div class="shop-item">
+                    <span class="shop-item-title">Rope-Skipping</span>
+                    <img class="shop-item-image" src="Images/Rope-Skipping.png">
+                    <div class="shop-item-details">
+                        <span class="shop-item-price">12 Cal/min</span>
+                        <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                    </div>
+                </div>
+                <div class="shop-item">
+                    <span class="shop-item-title">Push-Ups</span>
+                    <img class="shop-item-image" src="Images/Push-Ups.png">
+                    <div class="shop-item-details">
+                        <span class="shop-item-price">6 Cal/min</span>
+                        <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                    </div>
+                </div>
+                <div class="shop-item">
+                    <span class="shop-item-title">Plank</span>
+                    <img class="shop-item-image" src="Images/Plank.png">
+                    <div class="shop-item-details">
+                        <span class="shop-item-price">11 Cal/min</span>
+                        <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                    </div>
+                </div>
+            </div>
+	</div>
         <div id="stats" data-tab-content>
             
         <div class="stat-tab">
