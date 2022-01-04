@@ -52,7 +52,7 @@
 .shop-item {
     width: 35%;
     margin: 30px;
-    border: 2px solid rgb(189, 54, 54); 
+    border: 2px solid black; 
     border-radius: 25px;
     padding: 20px;
     box-shadow: 0px 0px 20px green;
