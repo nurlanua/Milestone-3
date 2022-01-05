@@ -57,9 +57,11 @@ function purchaseClicked() {
 }
 
 function removeCartItem(event) {
-    var buttonClicked = event.target
-    buttonClicked.parentElement.parentElement.remove()
-    updateCartTotal()
+    if(confirm("Are you sure you want to remove this item?")){
+        var buttonClicked = event.target
+        buttonClicked.parentElement.parentElement.remove()
+        updateCartTotal()
+    }
 }
 
 function quantityChanged(event) {
