@@ -227,6 +227,37 @@ function graph3(){
     });
 }
 
+function graph4(){
+    let canvas = document.getElementById('myChart');
+    let ctx = canvas.getContext("2d");
+    if(curGraph){curGraph.destroy();}
+    curGraph = new Chart(ctx, {
+        type: 'line',
+        data: {
+            labels: ['01.12.21','02.12.21','03.12.21','04.12.21','05.12.21','06.12.21',
+            '07.12.21', '08.12.21', '09.12.21', '10.12.21', '11.12.21', '12.12.21', '13.12.21', '14.12.21'],
+            datasets: [{
+                label: 'Average heart rate',
+                data: [74,	91,	41,	88,	45,	46,	145, 93,	84,	63,	143, 139, 113, 120],
+                borderColor: '#FF00FF',
+                pointBackgroundColor: '#FF00FF',
+                borderWidth: 1
+            }]
+        },
+        options: {
+            scales: {
+                y: {
+                    beginAtZero: true,
+                    title: {
+                      display: true,
+                      text: 'Average heart rate'
+                    }
+                  }
+            }
+        }
+    });
+}
+
 function graphUpdateR(){
     curGraph.data.labels = ['15.12.21','16.12.21','17.12.21','18.12.21','19.12.21','20.12.21',
     '21.12.21', '22.12.21', '23.12.21', '24.12.21', '25.12.21', '26.12.21', '27.12.21', '28.12.21'];
@@ -239,6 +270,9 @@ function graphUpdateR(){
             break;
         case "Calories Burned":
             curGraph.data.datasets[0].data = [661,	854,	654,	908,	230,	533,	300,	654,	579,	844,	107,	255,	134,	370];
+            break;
+        case "Average heart rate":
+            curGraph.data.datasets[0].data = [123,	112,	142,	59,	99,	149,	76,	72,	109,	61,	41,	133,	87,	78];
             break;
     }
     curGraph.update();
@@ -256,6 +290,9 @@ function graphUpdateL(){
             break;
         case "Calories Burned":
             curGraph.data.datasets[0].data = [300, 581, 567, 123, 876, 555, 666, 777, 1002, 945, 736, 345, 816, 1123];
+            break;
+        case "Average heart rate":
+            curGraph.data.datasets[0].data = [74,	91,	41,	88,	45,	46,	145, 93,	84,	63,	143, 139, 113, 120];
             break;
     }
     curGraph.update();
