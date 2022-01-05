@@ -1,0 +1,231 @@
+body{
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  main{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .left-side{
+    text-align:center;
+    margin: 4rem;
+    background-color: white;
+    
+  }
+  
+  .right-side{
+    text-align:center;
+    margin: 4rem;
+    background-color: white;
+  }
+  
+  .avatar{
+    padding-top: 12%;
+  }
+  
+  img{
+    width: 250px;
+    height: 300px;
+  }
+  
+  .user-name{
+    position: relative;
+    margin: 2rem;
+    text-align:center;
+  }
+  
+  .Goals{
+  /*   margin: 2rem; */
+    text-align: center;
+  }
+  
+  .graphs{
+    text-align:center;
+    box-shadow: 0px 0px 20px green;
+    border-radius: 0.5rem;
+    margin: 2rem;
+    padding: 2rem;
+    width: 200px;
+    height: 200px;
+  }
+  
+  .graph-img{
+    width: 50px;
+    height: 50px;
+  }
+  
+  .progress-bar{
+    width: 300px;
+    height: 25px;
+    background-color: grey;
+    border-radius: 0.5rem;
+    box-shadow: 0px 0px 20px grey;
+  }
+  
+  .the-progress{
+    width: 150px;
+    height: 25px;
+    background-color: #62fcaf;
+    border-radius: 0.5rem;
+  }
+  
+  .the-progress-st{
+    width: 50%;
+    height: 25px;
+    background-color: #62fcaf;
+    border-radius: 0.5rem;
+  }
+  
+  .first_twos{
+    display: flex;
+    flex-warp: wrap;
+    justify-content: center;
+  }
+  
+  .step_and_sleep{
+     display: flex;
+     flex-warp: wrap;
+     justify-content: center;
+  }
+  
+  .user-hp{
+    padding: 2rem;
+  }
+  
+  .user-st{
+    padding-top: 40%;
+  }
+  
+  .set_goal_button{
+    margin: 1rem;
+  }
+  
+  .writing{
+    margin: 1rem;
+  }
+  
+  .input_popup{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+  /*   scale 0 means that the size of the thing is 0 */
+    transform: translate(-50%, -50%) scale(0) ;
+    transition: 200ms ease-in-out;
+    border: 1px solid black;
+    z-index: 10;
+    background-color: white;
+    width: 500px;
+    border-radius: 10px;
+    width: 500px;
+    height: 500px;
+  }
+  
+  .popup_heading{
+    padding: 10px 15px;
+    display: flex;
+    justify-content: right;
+    border-bottom: 1px solid black;
+  }
+  
+  .popup_heading .title{
+    text-align: center;
+    padding-right: 40%;
+  }
+  
+  .input_popup .popup_content{
+    padding: 25% 15px;
+    display: block;
+  }
+  
+  .input_popup.active{
+    transform:translate(-50%, -50%) scale(1);
+  }
+  
+  .close-button{
+    background: none;
+    border: none;
+    font-size: 2rem;
+    font-weight: bold;
+  }
+  
+  #overlay{
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.5);
+    pointer-events: none;
+    transition: 200ms ease-in-out;
+  }
+  
+  #overlay.active{
+    opacity: 1;
+    pointer-events: all;
+  }
+  
+  .submit{
+    margin: 2rem;
+  }
+  
+  
+  
+  .calorie-popup-description{
+    transform: scale(0);
+    position: absolute;
+  }
+  
+  .calorie-popup-description.active_popup{
+    transform: scale(1);
+    position: absolute;
+  }
+  
+  .heart-rate-popup-description{
+    transform: scale(0);
+    position: absolute;
+  }
+  
+  .heart-rate-popup-description.active_popup{
+    transform: scale(1);
+    position: absolute;
+  }
+  
+  .steps-popup-description{
+    transform: scale(0);
+    position: absolute;
+  }
+  
+  .steps-popup-description.active_popup{
+    transform: scale(1);
+    position: absolute;
+  }
+  
+  .sleep-popup-description{
+     transform: scale(0);
+     position: absolute;
+  }
+  
+  .sleep-popup-description.active_popup{
+     transform: scale(1);
+    position: absolute;
+  }
+  
+  .enter-description{
+     transform: scale(0);
+     position: absolute;
+  }
+  
+  .enter-description.active_popup{
+    transform: scale(1);
+    position: absolute;
+  }
+  
+  .description{
+    padding-bottom: 2rem;
+  }
+  
+  

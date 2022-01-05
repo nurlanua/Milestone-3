@@ -1,0 +1,213 @@
+<html>
+  <head>
+    <h3>My Fitness App</h3>
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="Styles.css">
+    <script src="my_script.js"></script>
+  </head>
+  
+  <body>
+    <main>
+<!--       The user name will go right beside the tabs(left) -->
+<!--       <div class="user-info">
+           <div class="user-name">
+         <h2>Welcome Jeff</h2>
+        </div>
+      </div> -->
+      
+      <div class="left-side">
+        <div class="user-level">
+          <h1>Streak: 5 days</h1>
+        </div>
+        <div class="avatar">
+          <img id="avatar_img" src="https://thumbs.dreamstime.com/b/fat-pig-eats-fast-food-hamburger-cartoon-illustration-fat-pig-eats-fast-food-hamburger-cartoon-illustration-isolated-image-143008234.jpg" alt="The Avatar">
+        </div>
+        
+<!--         <div class="user-hp">
+          <h2>Hp progress bar</h2>
+          <div class="progress-bar">
+            <div class="the-progress"></div>
+          </div>
+        </div> -->
+        
+        <div class="user-st">
+          <h2 id="st-display">Stamina: None </h2>
+          <div class="progress-bar">
+            <div id="stamina-progress-bar" class="the-progress-st"></div>
+          </div>
+        </div>
+       
+      </div>
+      
+      <div class="right-side">
+        
+        <div class="Goals">
+         <h1>Goals</h1>
+          
+          <div class="first_twos">
+            <div class="graphs">
+              <h2>Calories</h2>
+              
+            <div>
+               <span id="write_cal"></span>
+            </div>
+              
+              <div class="writing">
+               <span id="write_achieved"></span>
+              </div>
+            
+              <div class="set_goal_button">
+                <button onclick="open_input_popup('cal')">Set Goal</button>
+              </div>
+              
+              <div class="write_goal_btn">
+                <button onclick="open_input_popup('enter_data'); validateGoals('cal'); setCurrentGoal('cal');">Enter Data</button>
+              </div>
+              
+            </div>
+          
+          <div class="graphs">
+            <h2>Heart Rate</h2>
+             <div>
+               <span id="write_hr"></span>
+            </div>
+              
+              <div class="writing">
+               <span id="write_achieved_hr"></span>
+              </div>
+            <div class="set_goal_button">
+                <button onclick="open_input_popup('hr')">Set Goal</button>
+              </div>
+              
+              <div class="write_goal_btn">
+                <button onclick="open_input_popup('enter_data'); validateGoals('hr'); setCurrentGoal('hr');">Enter Data</button>
+              </div>
+          </div>
+         </div>
+          
+          <div class="step_and_sleep">
+             <div class="graphs">
+                <h2>Steps</h2>
+               
+               <div>
+                <span id="write_steps"></span>
+              </div>
+              
+              <div class="writing">
+               <span id="write_achieved_steps"></span>
+              </div>
+               
+               <div class="set_goal_button">
+                <button onclick="open_input_popup('steps')">Set Goal</button>
+              </div>
+               
+               <div class="write_goal_btn">
+                <button onclick="open_input_popup('enter_data'); validateGoals('steps'); setCurrentGoal('steps');">Enter Data</button>
+              </div>
+               
+            </div>
+          
+            <div class="graphs">
+              <h2>Sleep</h2>
+              <div>
+               <span id="write_sleep"></span>
+            </div>
+              
+              <div class="writing">
+               <span id="write_achieved_sleep"></span>
+              </div>
+              
+              <div class="set_goal_button">
+                <button onclick="open_input_popup('sleep')">Set Goal</button>
+              </div>
+              
+              <div class="write_goal_btn">
+                <button onclick="open_input_popup('enter_data'); validateGoals('sleep'); setCurrentGoal('sleep');">Enter Data</button>
+              </div>
+              
+            </div>
+          </div>
+          
+        </div>
+      
+      </div>
+   <div id="popup" class="input_popup">
+     <div class="popup_heading">
+       <div class="title"> Set Goal</div>
+       <button id="close-btn" class="close-button" onclick="close_input_popup()">&times;</button>
+     </div>
+     <div class="popup_content">
+       
+       <div id="cal" class="calorie-popup-description">
+          <div class="description">
+            <span class="description">Enter the number of calories you would like to burn and click submit</span>
+          </div>
+       <form class="input_form" action="">
+         <label for="calorie_goal">Calories (KCAL): </label>
+         <input id="cal_input" type="text">
+       </form>
+         <div class="submit">
+         <button class="submit-button" onclick="setInputValues('calories')">submit</button>
+       </div>
+       </div>
+       
+       <div id="hr" class="heart-rate-popup-description">
+          <div class="description"><span class="description">Enter the heart beats per minutes you would like of achieve today</span></div>
+       <form class="input_form" action="">
+         <label for="hr-goal">Heart Rate (BPM): </label>
+         <input id="hr-input" type="text">
+       </form>
+         <div class="submit">
+         <button class="submit-button" onclick="setInputValues('heart_rate')">submit</button>
+       </div>
+       </div>
+       
+       <div id="steps" class="steps-popup-description">
+          <div class="description">
+            <span class="description">Enter the number of steps you would like to walk today and click submit</span>
+          </div>
+       <form class="input_form" action="">
+         <label for="steps-goal">No. of Steps: </label>
+         <input id="steps_input" type="text">
+       </form>
+         
+         <div class="submit">
+         <button class="submit-button" onclick="setInputValues('steps')">submit</button>
+        </div>
+         
+       </div>
+       
+       <div id="sleep" class="sleep-popup-description">
+          <div class="description">
+            <span class="description">Enter the number of hours you would like to sleep and click submit</span>
+          </div>
+       <form class="input_form" action="">
+         <label for="sleep-goal">Sleep Hours: </label>
+         <input id="sleep_input" type="text">
+       </form>
+         
+         <div class="submit">
+         <button class="submit-button" onclick="setInputValues('sleep')">submit</button>
+         </div>
+</div>
+       <div id="enter_data" class="enter-description">
+          <div class="description">
+            <span class="description">Enter the goal you have achieved for the selected entity today and click submit</span>
+          </div>
+       <form  class="input_form" action="">
+         <label for="enter-data">Goal achieved: </label>
+         <input id="enter-data" type="text">
+       </form>
+         
+         <div class="submit">
+         <button class="submit-button" onclick="setInputValues('enter-data')">submit</button>
+         </div>
+</div>
+     </div>
+   </div>
+    </main>
+    <div  id="overlay"></div>
+  </body>
+</html>
